@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Liars Dice</h1>
+        <form id="settings" novalidate>
+            <fieldset>
+                <div class="field">
+                    <label for="diceCount"> Choose dice count</label>
+                    <select id="diceCount" name="diceCount" required>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                    </select>
+
+                </div>
+                
+            </fieldset>
+            <button type="button" id="rollButton">Roll Dice!</button>
+        </form>
+        <section id="results" hidden>
+
+            <div id="diceContainer"></div>
+            <p id="totalSum"></p>
+            <p id="message"></p>
+        </section>
+    </main>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
