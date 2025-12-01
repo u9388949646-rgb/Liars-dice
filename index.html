@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Vi kobler til CSS-filen. Den gir stil til siden. -->
 </head>
 
 <body>
     <main>
         <h1>Liars Dice</h1>
-        <form id="settings" novalidate>
+
+         <!-- Dette skjemaet lar oss velge hvor mange terninger vi bruker. -->
+        <form id="settings">
             <fieldset>
                 <div class="field">
+                    <!-- Vi spør brukeren å velge antall terninger. -->
                     <label for="diceCount"> Choose dice count</label>
+                    <!-- Her velger brukeren et tall. -->
                     <select id="diceCount" name="diceCount" required>
                         <option value="3">3</option>
                         <option value="4">4</option>
@@ -27,16 +32,16 @@
                 </div>
                 
             </fieldset>
-            <button type="button" id="rollButton">Roll Dice!</button>
+            <button type="button" id="rollButton">Roll Dice!</button> <!-- Knapp for å kaste terningene. -->
         </form>
-        <section id="results" hidden>
+        <section id="results" hidden><!-- Her viser vi resultatene etter at vi har kastet terningene. -->
 
-            <div id="diceContainer"></div>
-            <p id="totalSum"></p>
-            <p id="message"></p>
+            <div id="diceContainer"></div> <!-- Her plasserer vi alle terningene. -->
+            <p id="totalSum"></p> <!-- Her viser vi summen av terningene. -->
+        
         </section>
     </main>
-    <script src="script.js" defer></script>
+    <script src="script.js" defer></script>  <!-- Vi kobler til JavaScript-filen. Den gjør siden interaktiv. -->
 </body>
 
 </html>

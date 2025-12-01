@@ -1,28 +1,27 @@
-/* Общие стили для body */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(135deg, #74ebd5, #ACB6E5); /* плавный градиент */
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5); /* bakgrunn med gradient */
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: flex; /* sentrerer innholdet */
+  justify-content: center;/* horisontal senter */
+  align-items: center;/* vertikal senter */
 }
 
 
-/* Центрирование main и ограничение ширины */
+
 main {
-  background: rgba(255, 255, 255, 0.9); /* полупрозрачный фон */
+  background: rgba(255, 255, 255, 0.9); /* halvtransparent bakgrunn */
   padding: 2rem;
-  border-radius: 1rem;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-  text-align: center;
-  max-width: 600px;
-  width: 90%;
+  border-radius: 1rem;  /* avrundede hjørner */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* skygge */
+  text-align: center; /* tekst i midten */
+  max-width: 600px;  /* maks bredde */
+  width: 90%; /* bredde for små skjermer */
 }
 
-/* Заголовки */
+/* Overskrifter */
 h1 {
   margin-bottom: 1rem;
   font-size: 2rem;
@@ -34,43 +33,64 @@ h2 {
   font-size: 1.5rem;
   color: #333;
 }
-
-/* Форма */
-form {
-  margin-bottom: 1rem;
+fieldset {
+  border: none;  /* fjern ramme */
 }
 
-select, button {
+form {
+  margin-bottom: 0.75rem;
+}
+
+select{
+  font-size: 1rem;
+  padding: 0.5em 0.8em;
+  border-radius: 0.5em; /* avrundede kanter */
+  border: 1px solid #ccc;
+  margin: 0.3em;
+}
+button {
   font-size: 1rem;
   padding: 0.5em 0.8em;
   border-radius: 0.5em;
   border: 1px solid #ccc;
   margin: 0.3em;
+ border-color: rgb(155, 148, 150);
 }
+
 
 button:hover {
-  background: #f0f0f0;
-  cursor: pointer;
-}
+  background: #98e4d5; /* bakgrunn når musen er over */
+  cursor: pointer; /* pekeren blir hånd */
+  border-color: rgb(115, 135, 137);
+ }
 
-/* Контейнер для кубиков */
+
+/* Container for terningene */
 #diceContainer {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 0.5em;
+  gap: 0.5em; /* mellomrom mellom terningene */
   margin-top: 1em;
-  perspective: 800px;
+  perspective: 800px; /* 3D effekt (valgfri) */
 }
 
-/* Кубик */
+/* Terning */
 .die {
   font-size: 3rem;
   display: inline-block;
+  border-radius: 15px;   /* скругленные углы */
   margin: 0.3em;
+
 }
 
-/* Анимация тряски */
+/* Effekt når musen er over terningen */
+.die:hover {
+  transform: scale(1.1);
+  background: #f7f7f7;
+}
+
+/* Animasjon for rist */
 @keyframes shake {
   0% { transform: rotate(0deg); }
   25% { transform: rotate(15deg); }
@@ -80,17 +100,16 @@ button:hover {
 }
 
 .shake {
-  animation: shake 0.5s;
+  animation: shake 0.5s;/* bruk animasjonen */
 }
 
-/* Результаты */
 #results {
   text-align: center;
   margin-top: 1em;
 }
 
-#totalSum, #message {
+#totalSum {
   font-size: 1.2rem;
   margin-top: 0.5rem;
-  font-weight: bold;
+  font-weight: bold; /* fet skrift */
 }
